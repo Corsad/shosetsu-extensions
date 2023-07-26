@@ -51,8 +51,7 @@ local function parseNovel(novelURL, loadChapters)
   local content = doc:selectFirst("#primary")
   local description = topSection:selectFirst(".elementor-section:nth-last-child(1)"):selectFirst(".elementor-widget-container")
   local info = NovelInfo {
-    title = content:selectFirst(".entry-title"):text(),
-    description = table.concat(map(description:select("p"), text), '\n'),
+    title = content:selectFirst(".entry-title"):text()
   }
   
   if loadChapters then
