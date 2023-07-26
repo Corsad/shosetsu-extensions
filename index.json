@@ -1,0 +1,20 @@
+{
+  "libraries": [
+    {
+      "name": "url",
+      "ver": "1.0.0"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "bcatranslation",
+      "fileName": "bcatranslation",
+      "imageURL": "",
+      "id": 989997,
+      "lang": "en",
+      "ver": "1.0.0",
+      "libVer": "1.0.0",
+      "md5": "C6B1C776C5802FF0C5205736147FFED8B5DE51D078C1390247E0128020CA4BDB"
+    }
+  ]
+}
