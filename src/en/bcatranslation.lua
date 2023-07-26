@@ -1,5 +1,3 @@
--- {"id":4305,"ver":"1.1.0","libVer":"1.0.0","author":"MechTechnology"}
-
 local baseURL = "https://bcatranslation.com"
 
 local encode = Require("url").encode
@@ -78,7 +76,7 @@ local function getPassage(chapterURL)
 end
 
 local function getNovelsListing(data) 
-  return parseListing(url)
+  return parseListing("/")
 end
 
 return {
