@@ -33,7 +33,7 @@ local function getChapterList(content, novelURL)
   local chapterList = content:selectFirst(".entry-content"):select("p")
   local chapters = (mapNotNil(chapterList, function(v, i)
     local a = v:selectFirst("a")
-    if a ~= nil and string.find(a:attr("href"), "-chapter-") then
+    if a ~= nil and string.find(a:attr("href"), "chapter") then
       return NovelChapter {
         order = i,
         title = a:text(),
@@ -79,6 +79,11 @@ local function getNovelsListing(data)
   return parseListing("/")
 end
 
+local function getSearch(data)
+  local url = "/"
+  return parseListing(url)
+end
+
 return {
   id = 4305,
   name = "bcatranslation",
@@ -94,6 +99,7 @@ return {
   -- Website has intentially broken their search function (Thus Disabled)
   hasSearch = false,
   isSearchIncrementing = true,
+  search = getSearch,
 
   shrinkURL = shrinkURL,
   expandURL = expandURL
